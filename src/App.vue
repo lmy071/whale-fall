@@ -16,4 +16,9 @@ nav {
 	top: 5px;
 	left: 5px;
 }
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 </style>

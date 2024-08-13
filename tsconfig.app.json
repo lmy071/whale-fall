@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // 这是一个重要的设置，它是解析非相对模块名的基础目录
+    "paths": {
+      "@": ["src"],
+      "u": ["src/utils"]
+    },
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",

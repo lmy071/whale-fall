@@ -15,20 +15,40 @@ import {ref} from 'vue'
 import {  useRouter } from 'vue-router'
 import { generateRandomNumberBetween} from '../utils/number'
 import { generateLightHexColor} from '../utils/color'
-const cardList = ref([ // 模拟数据
+
+type cardListT = {
+  color?:string,
+  height:string,
+  sort:number,
+  title?:string,
+  url?:string,
+  img?:string
+}
+
+
+const cardList = ref<cardListT[]>([
   {
-    color:  '#FCCF0A',
+    color:  '#e6cc55',
     height: '100px',
-		index: 999,
+		sort: 999,
 		title:"备忘录",
-		url:'/vvv/todoList'
+		url:'/vvv/todoList',
+    img:'',
+  },
+  {
+    color:  '#efa651',
+    height: '100px',
+    sort: 998,
+    title:"相册",
+    url:'/vvv/photoAlbum',
+    img:'',
   }
 ])
-const list: { [key: string]: any }[] = Array.from({ length: 100 }, (_, index) => ({  
+const list: cardListT[] = Array.from({ length: 100 }, (_, index) => ({
 	color: generateLightHexColor(),
 	height: generateRandomNumberBetween(60,200)+'px',
-	id:index
-})); 
+  sort:index,
+}));
 
 
 
