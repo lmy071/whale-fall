@@ -42,6 +42,22 @@ const cardList = ref<cardListT[]>([
     title:"相册",
     url:'/vvv/photoAlbum',
     img:'',
+  },
+  {
+    color:  '#fa8be4',
+    height: '100px',
+    sort: 997,
+    title:"记账pc端",
+    url:'/vvv/accountBookH5',
+    img:'',
+  },
+	{
+    color:  '#fa8be4',
+    height: '100px',
+    sort: 996,
+    title:"登录",
+    url:'/login',
+    img:'',
   }
 ])
 const list: cardListT[] = Array.from({ length: 100 }, (_, index) => ({

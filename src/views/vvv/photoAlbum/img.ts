@@ -1,4 +1,4 @@
-import { gitee } from "src/utils/urlContort"
+import { gitee } from "../../../utils/urlContort"
 const list: HTMLImageElement[] = []
 
 const imgUrl = [
